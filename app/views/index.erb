@@ -1,8 +1,52 @@
 <form class="die-roll" action="/roll" method="post">
-  <input type="integer" name="dice[size]" value="">
+  <select class="" name="dice[size][first]">
+    <option value="2">2 Sided</option>
+    <option value="4">4 Sided</option>
+    <option value="6">6 Sided</option>
+    <option value="8">8 Sided</option>
+    <option value="10">10 Sided</option>
+    <option value="12">12 Sided</option>
+    <option value="20">20 Sided</option>
+    <option value="100">100 Sided</option>
+  </select>
+  <input type="text" name="dice[number][first]" value="">
+  <select class="" name="dice[size][second]">
+    <option value="2">2 Sided</option>
+    <option value="4">4 Sided</option>
+    <option value="6">6 Sided</option>
+    <option value="8">8 Sided</option>
+    <option value="10">10 Sided</option>
+    <option value="12">12 Sided</option>
+    <option value="20">20 Sided</option>
+    <option value="100">100 Sided</option>
+  </select>
+  <input type="text" name="dice[number][second]" value="">
+  <select class="" name="dice[size][third]">
+    <option value="2">2 Sided</option>
+    <option value="4">4 Sided</option>
+    <option value="6">6 Sided</option>
+    <option value="8">8 Sided</option>
+    <option value="10">10 Sided</option>
+    <option value="12">12 Sided</option>
+    <option value="20">20 Sided</option>
+    <option value="100">100 Sided</option>
+  </select>
+  <input type="text" name="dice[number][third]" value="">
   <input type="submit" name="submit" value="Roll!">
 </form>
 
-<% if @dice %>
-<h1><%= @dice %></h1>
+
+<% if @total1 %>
+<% @total = @total1 %>
+<h1><%= @total1 %></h1>
 <% end %>
+<% if @total2 %>
+<% @total = @total2 + @total %>
+<h1><%= @total2 %></h1>
+<% end %>
+<% if @total3 %>
+<% @total = @total3 + @total %>
+<h1><%= @total3 %></h1>
+<% end %>
+<h1>Grand Total</h1>
+<h1><%= @total %></h1>
