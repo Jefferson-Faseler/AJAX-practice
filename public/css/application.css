@@ -1,0 +1,33 @@
+body {
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-image: url("http://img10.deviantart.net/e984/i/2015/287/c/5/red_dragon_by_sandara-d6hpycs.jpg")
+}
+
+input[type=submit] {
+  background-color: black;
+  border: none;
+  color: white;
+  width: 100px;
+  height: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #FF9A17;
+  width: 120px;
+  height: 30px;
+}
+
+.result-container {
+  background-color: ##FEDF5E;
+}
+
+h1 {
+  margin-top: 15%;
+  padding-left: 1%;
+  margin-left: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 100pt;
+  color: #FFFBAA
+}
