@@ -2,3 +2,7 @@
   <input type="integer" name="dice[size]" value="">
   <input type="submit" name="submit" value="Roll!">
 </form>
+
+<% if @dice %>
+<h1><%= @dice %></h1>
+<% end %>
