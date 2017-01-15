@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $('form').submit(function(event) {
     event.preventDefault();
-    var uri = $(event.target).attr('action')
+    var uri = $(event.target).attr('action');
     var sides = $('form').serialize();
     $.ajax({
       type: 'post',

@@ -23,5 +23,14 @@ params[:dice][:number][:third].to_i.times do
   @total3 = dice.roll + @total3
 end
 
+if request.xhr?
+  status 200
+  if @total1 > 1 || @total2 > 1 || @total3 > 1
+    erb :'/_partial', layout: false, locals: {total1: @total1, total2: @total2, total3: @total3}
+  else
+    status 422
+  end
+else
   erb :index
+end
 end
